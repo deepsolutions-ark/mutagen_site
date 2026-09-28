@@ -1,0 +1,60 @@
+/*
+ * Mutagen catalog.
+ *
+ * Each product has a name, a list of sizes as [strength, price in USD],
+ * and optional "aliases" (other names people search for, shown on the
+ * product page as "Also listed as").
+ *
+ * Catalog numbers follow the order of this list. To pin a number so it
+ * never changes when you add products, give the product a "no" field,
+ * e.g. { no: 12, name: "...", sizes: [...] }.
+ */
+window.MUTAGEN_PRODUCTS = [
+  { name: "5-Amino-1MQ", aliases: ["5-amino-1-methylquinolinium"], sizes: [["5mg", 7.0], ["50mg", 15.0]] },
+  { name: "AHK-CU", sizes: [["100mg", 12.5]] },
+  { name: "AOD-9604", sizes: [["5mg", 15.75]] },
+  { name: "ARA-290", aliases: ["Cibinetide"], sizes: [["10mg", 11.5]] },
+  { name: "BPC-157", sizes: [["5mg", 7.0], ["10mg", 9.75]] },
+  { name: "Cagrilintide", sizes: [["10mg", 25.5]] },
+  { name: "CJC-1295 (with DAC)", sizes: [["5mg", 23.75]] },
+  { name: "CJC-1295 (without DAC)", aliases: ["Mod GRF 1-29"], sizes: [["10mg", 21.0]] },
+  { name: "CJC-1295 + Ipamorelin", sizes: [["10mg", 17.5]] },
+  { name: "DSIP", aliases: ["Delta sleep-inducing peptide"], sizes: [["15mg", 15.0]] },
+  { name: "Epithalon", aliases: ["Epitalon"], sizes: [["10mg", 9.0], ["40mg", 21.0], ["50mg", 21.0]] },
+  { name: "FOX-04", aliases: ["FOXO4-DRI"], sizes: [["10mg", 47.25]] },
+  { name: "GHK-CU", aliases: ["Copper tripeptide-1"], sizes: [["50mg", 5.0], ["100mg", 9.0]] },
+  { name: "GHRP-6", aliases: ["Growth hormone-releasing peptide-6"], sizes: [["10mg", 8.75]] },
+  { name: "GLOW", sizes: [["70mg", 28.0]] },
+  { name: "HCG", aliases: ["Human chorionic gonadotropin"], sizes: [["10,000 IU", 22.0]] },
+  { name: "HGH Frag 176-191", sizes: [["5mg", 14.0]] },
+  { name: "Hexarelin Acetate", aliases: ["Examorelin"], sizes: [["5mg", 14.0]] },
+  { name: "IGF-1 LR3", aliases: ["Long R3 IGF-1"], sizes: [["1mg", 29.75]] },
+  { name: "Ipamorelin", sizes: [["5mg", 7.0], ["10mg", 12.25]] },
+  { name: "Kisspeptin", sizes: [["10mg", 15.0]] },
+  { name: "KLOW", sizes: [["80mg", 33.25]] },
+  { name: "KPV", aliases: ["Lys-Pro-Val"], sizes: [["10mg", 12.25]] },
+  { name: "LL-37", sizes: [["5mg", 36.75]] },
+  { name: "Melanotan-1", aliases: ["Afamelanotide"], sizes: [["10mg", 7.25]] },
+  { name: "Melanotan-2", sizes: [["10mg", 8.5]] },
+  { name: "MOTS-C", sizes: [["10mg", 9.75], ["40mg", 29.75]] },
+  { name: "NAD+", aliases: ["Nicotinamide adenine dinucleotide"], sizes: [["500mg", 12.25], ["1,000mg", 18.75]] },
+  { name: "Oxytocin", sizes: [["2mg", 5.0]] },
+  { name: "PEG-MGF", aliases: ["PEGylated mechano growth factor"], sizes: [["2mg", 14.0]] },
+  { name: "Pinealon", sizes: [["20mg", 17.5]] },
+  { name: "PNC-27", sizes: [["10mg", 27.25]] },
+  { name: "PT-141", aliases: ["Bremelanotide"], sizes: [["10mg", 8.75]] },
+  { name: "Retatrutide", sizes: [["5mg", 10.5], ["10mg", 15.75], ["20mg", 26.25], ["30mg", 34.25], ["60mg", 52.5]] },
+  { name: "Selank", sizes: [["11mg", 8.5]] },
+  { name: "Semax", sizes: [["5mg", 6.25], ["10mg", 8.5]] },
+  { name: "Sermorelin Acetate", aliases: ["GRF 1-29"], sizes: [["10mg", 16.75]] },
+  { name: "SLUP-322", aliases: ["SLU-PP-332"], sizes: [["5mg", 16.75]] },
+  { name: "Snap-8", aliases: ["Acetyl octapeptide-3"], sizes: [["10mg", 8.0]] },
+  { name: "SS-31", aliases: ["Elamipretide"], sizes: [["10mg", 15.75], ["50mg", 45.5]] },
+  { name: "TB-500", sizes: [["10mg", 19.25]] },
+  { name: "Tesamorelin", sizes: [["5mg", 13.25], ["10mg", 19.25]] },
+  { name: "Thymalin", sizes: [["10mg", 14.0]] },
+  { name: "Thymosin Alpha-1", aliases: ["Thymalfasin"], sizes: [["10mg", 24.5]] },
+  { name: "Tirzepatide", sizes: [["10mg", 9.25], ["30mg", 22.0], ["60mg", 35.0]] },
+  { name: "VIP", aliases: ["Vasoactive intestinal peptide"], sizes: [["10mg", 21.0]] },
+  { name: "Wolverine Blend (TB-500 + BPC-157)", sizes: [["20mg", 29.75]] },
+];
