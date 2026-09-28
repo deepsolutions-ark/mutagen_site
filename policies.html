@@ -1,0 +1,95 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Policies | Mutagen</title>
+  <meta name="description" content="Mutagen research use policy, terms of sale, shipping, returns and privacy.">
+  <meta name="theme-color" content="#fafbf9">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/products.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+</head>
+<body data-page="policies">
+  <div data-site-header></div>
+
+  <!--
+    Starter policy text. Numbers and the email address come from assets/js/config.js.
+    Replace anything that doesn't match how you run the business, and have a lawyer
+    review this page before you launch.
+  -->
+  <main id="main">
+    <div class="wrap">
+      <h1 class="page-title">Policies</h1>
+    </div>
+
+    <div class="wrap policy">
+      <nav class="toc" aria-label="On this page">
+        <ul>
+          <li><a href="#research-use">Research use only</a></li>
+          <li><a href="#terms">Terms of sale</a></li>
+          <li><a href="#shipping">Shipping</a></li>
+          <li><a href="#returns">Returns</a></li>
+          <li><a href="#privacy">Privacy</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="prose">
+        <section id="research-use" aria-labelledby="h-research-use">
+          <h2 id="h-research-use">Research use only</h2>
+          <p class="lead bracket bracket--green" data-config="disclaimer"></p>
+          <p>Mutagen sells research compounds for in-vitro laboratory research. Our products are not drugs, foods, dietary supplements or cosmetics, and they have not been approved for use in people or animals.</p>
+          <p>By placing an order, you confirm that:</p>
+          <ul>
+            <li>You are <span data-config="minAge">21</span> or older.</li>
+            <li>You are buying for laboratory research only, and you won't use the products, or supply them to anyone else to use, in or on people or animals.</li>
+            <li>You know how to handle research chemicals safely, and you'll store, use and dispose of them properly.</li>
+            <li>You'll follow every law and regulation that applies to you where you live and work.</li>
+          </ul>
+          <p>We don't give advice on dosing, preparation or use in people or animals. We may cancel any order if we believe the products won't be used for research.</p>
+        </section>
+
+        <section id="terms" aria-labelledby="h-terms">
+          <h2 id="h-terms">Terms of sale</h2>
+          <p>Sending the checkout form gives us an order request. It becomes an order once we confirm it by email.</p>
+          <p>Prices are listed in <span data-config="currency">USD</span> and may change without notice. The price in your order confirmation is the one that applies.</p>
+          <p>We email payment instructions with your confirmation and ship once your payment clears. If something you asked for is unavailable, we'll tell you before you pay and adjust your order.</p>
+          <p>We may refuse or cancel any order.</p>
+        </section>
+
+        <section id="shipping" aria-labelledby="h-shipping">
+          <h2 id="h-shipping">Shipping</h2>
+          <p data-shipping-summary></p>
+          <p>Orders ship within <span data-config="shipping.processingDays">2</span> business days after payment clears, and we email tracking details when your order leaves us.</p>
+          <p>We currently ship to: <span data-config="shipping.countries">United States</span>. You're responsible for making sure you can legally receive the products where you are.</p>
+        </section>
+
+        <section id="returns" aria-labelledby="h-returns">
+          <h2 id="h-returns">Returns</h2>
+          <p>For quality and safety reasons, we can't accept returns. If your order arrives damaged, incomplete or incorrect, email us within <span data-config="returnWindowDays">7</span> days of delivery with your order number and photos, and we'll replace or refund the affected items.</p>
+        </section>
+
+        <section id="privacy" aria-labelledby="h-privacy">
+          <h2 id="h-privacy">Privacy</h2>
+          <p>When you send an order request, we collect your name, email address, phone number if you give one, and shipping address. We use them to process, ship and support your order, and for nothing else.</p>
+          <p>Order requests reach us by email or through our form provider. Your cart and your age confirmation are saved in your own browser, not on our servers. This site doesn't use advertising or tracking cookies.</p>
+          <p>We don't sell or share your information. To see or delete what we hold about you, email us.</p>
+        </section>
+
+        <section id="contact" aria-labelledby="h-contact">
+          <h2 id="h-contact">Contact</h2>
+          <p>Email <a data-config-email></a> with any question about an order. Include your order number if you have one.</p>
+        </section>
+      </div>
+    </div>
+  </main>
+
+  <div data-site-footer></div>
+</body>
+</html>

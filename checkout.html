@@ -1,0 +1,132 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Checkout | Mutagen</title>
+  <meta name="description" content="Send an order request to Mutagen.">
+  <meta name="robots" content="noindex">
+  <meta name="theme-color" content="#fafbf9">
+  <link rel="icon" href="assets/img/favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="assets/img/favicon-32.png" sizes="32x32" type="image/png">
+  <link rel="apple-touch-icon" href="assets/img/apple-touch-icon.png">
+  <link rel="preload" href="assets/fonts/archivo-var.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="assets/css/styles.css">
+  <script src="assets/js/config.js" defer></script>
+  <script src="assets/js/products.js" defer></script>
+  <script src="assets/js/app.js" defer></script>
+  <script src="assets/js/checkout.js" defer></script>
+</head>
+<body data-page="checkout">
+  <div data-site-header></div>
+
+  <main id="main">
+    <div class="wrap">
+      <h1 class="page-title">Checkout</h1>
+    </div>
+
+    <div class="wrap" data-checkout>
+      <div class="empty" data-empty hidden>
+        <p>Your cart is empty. Add compounds from the catalog, then come back here to send your order request.</p>
+        <a class="btn" href="index.html#catalog">Browse the catalog</a>
+      </div>
+
+      <div class="checkout" data-checkout-grid>
+        <aside class="summary bracket" data-summary aria-labelledby="summary-title"></aside>
+
+        <form class="checkout__form" data-form novalidate>
+          <p class="form-alert" role="alert" tabindex="-1" data-alert hidden></p>
+
+          <fieldset class="form-section">
+            <legend>Contact</legend>
+            <div class="field">
+              <label for="f-name">Full name</label>
+              <input id="f-name" name="name" autocomplete="name" aria-describedby="e-name" required>
+              <p class="error" id="e-name" data-error-for="name"></p>
+            </div>
+            <div class="row-2">
+              <div class="field">
+                <label for="f-email">Email</label>
+                <input id="f-email" name="email" type="email" autocomplete="email" inputmode="email" spellcheck="false" aria-describedby="e-email" required>
+                <p class="error" id="e-email" data-error-for="email"></p>
+              </div>
+              <div class="field">
+                <label for="f-phone">Phone <span class="opt">(optional)</span></label>
+                <input id="f-phone" name="phone" type="tel" autocomplete="tel">
+              </div>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Shipping address</legend>
+            <div class="field">
+              <label for="f-address1">Street address</label>
+              <input id="f-address1" name="address1" autocomplete="address-line1" aria-describedby="e-address1" required>
+              <p class="error" id="e-address1" data-error-for="address1"></p>
+            </div>
+            <div class="field">
+              <label for="f-address2">Apartment, suite or unit <span class="opt">(optional)</span></label>
+              <input id="f-address2" name="address2" autocomplete="address-line2">
+            </div>
+            <div class="row-3">
+              <div class="field">
+                <label for="f-city">City</label>
+                <input id="f-city" name="city" autocomplete="address-level2" aria-describedby="e-city" required>
+                <p class="error" id="e-city" data-error-for="city"></p>
+              </div>
+              <div class="field">
+                <label for="f-region">State</label>
+                <input id="f-region" name="region" autocomplete="address-level1" aria-describedby="e-region" required>
+                <p class="error" id="e-region" data-error-for="region"></p>
+              </div>
+              <div class="field">
+                <label for="f-postal">ZIP code</label>
+                <input id="f-postal" name="postal" autocomplete="postal-code" aria-describedby="e-postal" required>
+                <p class="error" id="e-postal" data-error-for="postal"></p>
+              </div>
+            </div>
+            <div class="field">
+              <label for="f-country">Country</label>
+              <select id="f-country" name="country" autocomplete="country-name" aria-describedby="e-country" required></select>
+              <p class="error" id="e-country" data-error-for="country"></p>
+            </div>
+            <div class="field">
+              <label for="f-notes">Order notes <span class="opt">(optional)</span></label>
+              <textarea id="f-notes" name="notes" rows="3"></textarea>
+            </div>
+          </fieldset>
+
+          <fieldset class="form-section">
+            <legend>Research use</legend>
+            <div class="check">
+              <input id="f-age" name="confirmAge" type="checkbox" aria-describedby="e-confirmAge">
+              <label for="f-age">I am <span data-config="minAge">21</span> or older.</label>
+              <p class="error" id="e-confirmAge" data-error-for="confirmAge"></p>
+            </div>
+            <div class="check">
+              <input id="f-research" name="confirmResearch" type="checkbox" aria-describedby="e-confirmResearch">
+              <label for="f-research">I am buying these products for laboratory research use only. They will not be used in or on people or animals.</label>
+              <p class="error" id="e-confirmResearch" data-error-for="confirmResearch"></p>
+            </div>
+            <div class="check">
+              <input id="f-terms" name="confirmTerms" type="checkbox" aria-describedby="e-confirmTerms">
+              <label for="f-terms">I have read and agree to the <a href="policies.html#research-use">research use policy</a> and <a href="policies.html#terms">terms of sale</a>.</label>
+              <p class="error" id="e-confirmTerms" data-error-for="confirmTerms"></p>
+            </div>
+          </fieldset>
+
+          <div class="visually-hidden" aria-hidden="true">
+            <label for="f-gotcha">Leave this field empty</label>
+            <input id="f-gotcha" name="_gotcha" type="text" tabindex="-1" autocomplete="off">
+          </div>
+
+          <button class="btn btn--primary btn--block" type="submit" data-submit>Send order request</button>
+          <p class="fine" data-config="paymentNote"></p>
+        </form>
+      </div>
+    </div>
+  </main>
+
+  <div data-site-footer></div>
+</body>
+</html>

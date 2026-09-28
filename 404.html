@@ -1,0 +1,39 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Page not found | Mutagen</title>
+  <meta name="robots" content="noindex">
+  <style>
+    body { margin: 0; min-height: 100vh; display: grid; place-items: center; background: #fafbf9; color: #0e2415; font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; }
+    .box { position: relative; max-width: 460px; margin: 24px; padding: 32px 32px 32px 38px; background: #fff; box-shadow: inset 4px 0 0 #2a9135, inset 0 -4px 0 #2a9135; }
+    .box::before { content: ""; position: absolute; left: 0; top: 0; width: 72%; height: 4px; background: #2a9135; }
+    h1 { margin: 0 0 12px; font-size: 1.75rem; line-height: 1.1; }
+    p { margin: 0 0 20px; line-height: 1.5; }
+    a.btn { display: inline-flex; align-items: center; min-height: 44px; padding: 0 20px; background: #1b6e27; color: #fff; font-weight: 600; text-decoration: none; }
+    a.btn:hover { background: #0e2415; }
+    a:focus-visible { outline: 2px solid #1b6e27; outline-offset: 2px; }
+  </style>
+</head>
+<body>
+  <main class="box">
+    <h1>Page not found</h1>
+    <p>This address doesn't match a page on the Mutagen site. Check the link, or go to the catalog.</p>
+    <a class="btn" id="home" href="/">Go to the catalog</a>
+  </main>
+  <script>
+    // Where the store lives. For https://you.github.io/mutagen/ set this to "/mutagen/".
+    // Leave it empty to guess from the address.
+    var SITE_ROOT = "";
+    (function () {
+      var root = SITE_ROOT;
+      if (!root) {
+        var parts = location.pathname.split("/").filter(Boolean);
+        root = /\.github\.io$/.test(location.hostname) && parts.length ? "/" + parts[0] + "/" : "/";
+      }
+      document.getElementById("home").href = root + "index.html#catalog";
+    })();
+  </script>
+</body>
+</html>
